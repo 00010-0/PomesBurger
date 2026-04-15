@@ -25,166 +25,187 @@
     body { background: var(--dark); color: var(--off-white); font-family: var(--font-body); overflow-x: hidden; }
 
     /* NAV */
-    nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; background: rgba(11,15,14,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(26,158,143,0.2); }
+    nav { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(11,15,14,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(26,158,143,0.2); }
     .logo { font-family: var(--font-display); font-size: 24px; letter-spacing: 4px; color: white; text-decoration: none; }
     .logo span { color: var(--teal-light); }
 
     /* HERO */
-    .hero { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; text-align: center; }
+    .hero { height: 70vh; display: flex; align-items: center; justify-content: center; position: relative; text-align: center; }
     .hero-img { position: absolute; inset: 0; background: url('burger.jpg') center/cover; opacity: 0.4; }
     .hero-content { z-index: 2; }
     .hero-h1 { font-family: var(--font-display); font-size: clamp(80px, 15vw, 160px); line-height: 0.9; margin-bottom: 20px; }
     .hero-h1 span { -webkit-text-stroke: 1px var(--yellow); color: transparent; }
 
-    /* CARTA COMPLETA */
-    .menu-section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+    /* SECCIÓN CARTA */
+    .menu-section { padding: 60px 20px 100px; max-width: 1200px; margin: 0 auto; }
     .section-title { font-family: var(--font-display); font-size: 4rem; color: var(--yellow); text-align: center; margin-bottom: 50px; letter-spacing: 3px; }
     
-    .menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-    .menu-category h3 { font-family: var(--font-display); font-size: 2.2rem; color: var(--teal-light); border-bottom: 2px solid var(--teal); margin-bottom: 25px; padding-bottom: 5px; }
+    .menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 50px; }
+    .menu-category { margin-bottom: 40px; }
+    .menu-category h3 { font-family: var(--font-display); font-size: 2.5rem; color: var(--teal-light); border-bottom: 2px solid var(--teal); margin-bottom: 25px; padding-bottom: 5px; }
     
-    .menu-item { display: flex; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px dashed rgba(255,255,255,0.1); padding-bottom: 10px; }
+    .menu-item { display: flex; justify-content: space-between; margin-bottom: 22px; border-bottom: 1px dashed rgba(255,255,255,0.1); padding-bottom: 12px; }
     .item-info { flex: 1; padding-right: 20px; }
-    .item-info h4 { font-family: var(--font-body); font-size: 1.1rem; text-transform: uppercase; color: white; margin-bottom: 5px; }
-    .item-info p { font-size: 0.85rem; color: var(--muted); font-weight: 300; color: rgba(255,255,255,0.6); }
-    .item-price { font-family: var(--font-display); font-size: 1.4rem; color: var(--yellow); white-space: nowrap; }
+    .item-info h4 { font-family: var(--font-body); font-size: 1.15rem; text-transform: uppercase; color: white; margin-bottom: 4px; font-weight: 700; }
+    .item-info h4 span { color: var(--teal-light); margin-right: 8px; font-family: var(--font-display); }
+    .item-info p { font-size: 0.9rem; color: rgba(255,255,255,0.7); font-weight: 300; line-height: 1.4; }
+    .item-price { font-family: var(--font-display); font-size: 1.5rem; color: var(--yellow); white-space: nowrap; }
 
-    /* SECCIÓN RESEÑAS */
-    .reviews-section { padding: 80px 20px; background: var(--dark2); text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1100px; margin: 40px auto; }
-    .review-card { background: #1a2120; padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
-    .stars { color: var(--yellow); font-size: 1.2rem; margin-bottom: 15px; }
-    .author { font-weight: bold; color: var(--teal-light); text-transform: uppercase; font-size: 0.8rem; margin-top: 10px; display: block; }
+    /* CONTACTO */
+    .contact-container { padding: 80px 20px; background: var(--dark2); border-top: 2px solid var(--teal); }
+    .contact-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; }
+    .map-frame { border: 4px solid var(--teal); border-radius: 20px; overflow: hidden; height: 350px; }
+    .info-detail { font-size: 1.2rem; margin-bottom: 20px; }
+    .info-tag { color: var(--yellow); font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 5px; }
 
-    /* SECCIÓN EL BAR AMPLIA */
-    .bar-section { position: relative; height: 600px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-top: 2px solid var(--teal); border-bottom: 2px solid var(--teal); }
-    .bar-bg { position: absolute; inset: 0; background: url('bar pomes.jpg') center/cover fixed; filter: brightness(0.5); }
-    .bar-text { z-index: 2; text-align: center; background: rgba(0,0,0,0.4); padding: 40px; backdrop-filter: blur(3px); border-radius: 10px; }
-    .bar-text h2 { font-family: var(--font-display); font-size: 4rem; color: #fff; letter-spacing: 5px; }
+    footer { text-align: center; padding: 40px; background: #000; color: rgba(255,255,255,0.4); font-size: 0.8rem; letter-spacing: 2px; }
 
-    /* CONTACTO Y MAPA COLOR */
-    .contact-container { padding: 80px 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-    .map-frame { border: 4px solid var(--teal); border-radius: 20px; overflow: hidden; height: 450px; }
-    .info-tag { color: var(--yellow); font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 5px; }
-    .info-detail { font-size: 1.2rem; margin-bottom: 25px; font-weight: 600; }
-
-    footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px; }
-
-    @media (max-width: 768px) {
-      .hero-h1 { font-size: 70px; }
-      .bar-text h2 { font-size: 2.5rem; }
+    @media (max-width: 600px) {
+      .menu-container { grid-template-columns: 1fr; }
+      .hero-h1 { font-size: 80px; }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="#" class="logo">BURGER <span>POME</span></a>
+    <a href="#" class="logo">BAR <span>POME</span></a>
     <a href="tel:684140839" style="background: var(--yellow); color: black; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-decoration: none;">PEDIDOS: 684 140 839</a>
   </nav>
 
   <section class="hero">
     <div class="hero-img"></div>
     <div class="hero-content">
-      <h1 class="hero-h1">SMASH<br><span>POME</span></h1>
-      <p style="color: var(--teal-light); letter-spacing: 5px; font-weight: bold;">AUTÉNTICO GASTROBAR</p>
+      <h1 class="hero-h1">LA CARTA<span>POME</span></h1>
+      <p style="color: var(--teal-light); letter-spacing: 5px; font-weight: bold; text-transform: uppercase;">Gastrobar · Zaragoza</p>
     </div>
   </section>
 
-  <section class="menu-section" id="carta">
-    <h2 class="section-title">Nuestra Carta</h2>
+  <section class="menu-section">
     <div class="menu-container">
       
       <div class="menu-category">
-        <h3>PARA PICAR</h3>
+        <h3>LAS QUESADILLAS</h3>
         <div class="menu-item">
-          <div class="item-info"><h4>PATATAS BRAVAS</h4><p>Corte casero con nuestra salsa brava y alioli.</p></div>
-          <div class="item-price">6,00€</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-info"><h4>QUESADILLA DE VACUNO</h4><p>Carne picada, mix de quesos y vegetales.</p></div>
-          <div class="item-price">7,50€</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-info"><h4>BACALAO EN TEMPURA</h4><p>Tacos de bacalao con rebozado crujiente.</p></div>
+          <div class="item-info"><h4><span>1</span> Carne de Vacuno</h4><p>Queso Cheddar, cebolla caramelizada, Bacon crunchy y salsa Pome.</p></div>
           <div class="item-price">8,50€</div>
         </div>
         <div class="menu-item">
-          <div class="item-info"><h4>TOSTADA DE LOMO</h4><p>Lomo de calidad con pimientos asados.</p></div>
-          <div class="item-price">5,50€</div>
+          <div class="item-info"><h4><span>2</span> Contramuslo de pollo</h4><p>Queso ahumado, Panceta crujiente y cebolla caramelizada.</p></div>
+          <div class="item-price">6,50€</div>
         </div>
         <div class="menu-item">
-          <div class="item-info"><h4>CROQUETAS CASERAS</h4><p>Consultar disponibilidad y sabores.</p></div>
-          <div class="item-price">1,80€/u</div>
+          <div class="item-info"><h4><span>3</span> Bacon y Queso</h4></div>
+          <div class="item-price">4,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>4</span> Jamon York y Queso</h4></div>
+          <div class="item-price">3,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>5</span> Atún, cebolla, Maíz dulce</h4><p>Y mahonesa de cítricos.</p></div>
+          <div class="item-price">4,50€</div>
         </div>
       </div>
 
       <div class="menu-category">
-        <h3>SMASH BURGERS</h3>
+        <h3>LAS BURGUER DEL "CHEF"</h3>
         <div class="menu-item">
-          <div class="item-info"><h4>LA POME CLÁSICA</h4><p>Doble carne, cheddar, cebolla picada y salsa Pome.</p></div>
+          <div class="item-info"><h4><span>6</span> "Smash Burguer"</h4><p>Carne de Vacuno, queso Cheddar, cebolla caramelizada, Bacon crunchy, salsa Pome.</p></div>
           <div class="item-price">9,50€</div>
         </div>
         <div class="menu-item">
-          <div class="item-info"><h4>BACON CHEESE</h4><p>Doble carne, cheddar, bacon crujiente y BBQ.</p></div>
+          <div class="item-info"><h4><span>7</span> "Pulled Pork"</h4><p>Carne de Cerdo marinada y cocinada a baja temperatura, panceta crujiente y salsa barbacoa.</p></div>
+          <div class="item-price">9,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>8</span> Chipirones fritos</h4><p>Cebolla caramelizada y salsa brava.</p></div>
+          <div class="item-price">5,90€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>9</span> Solomillo de pollo crujiente</h4><p>Queso Cheddar, lechuga, tomate y salsa Pome.</p></div>
+          <div class="item-price">5,90€</div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3>BOCADILLOS GOURMET</h3>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>10</span> Pluma Ibérica</h4><p>Queso D.O Idiazabal, cebolla caramelizada y panceta crujiente.</p></div>
+          <div class="item-price">8,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>11</span> Lomo de cerdo</h4><p>Pimiento del piquillo, queso ahumado y salsa de mostaza y miel.</p></div>
+          <div class="item-price">5,90€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>12</span> Contramuslo de pollo</h4><p>Queso ahumado, cebolla caramelizada, panceta, salsa Pome.</p></div>
+          <div class="item-price">5,90€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>13</span> Bacon, queso</h4><p>Cebolla caramelizada y crema camembert.</p></div>
+          <div class="item-price">5,50€</div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3>RACIONES</h3>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>14</span> Patatas Bravas "CASERAS"</h4><p>Con la salsa Pome.</p></div>
+          <div class="item-price">4,00€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>15</span> Torreznicos de Soria</h4><p>Preparados al momento.</p></div>
+          <div class="item-price">6,00€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>16</span> Surtido de Ibéricos</h4></div>
+          <div class="item-price">15,00€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>17</span> Rodajas de Morcilla</h4><p>Sobre compota de manzana.</p></div>
+          <div class="item-price">7,00€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>18</span> Morro de cerdo fritico</h4></div>
+          <div class="item-price">5,00€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>19</span> Calamares a la andaluza</h4></div>
+          <div class="item-price">7,00€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4><span>20</span> Bacalao en Tempura</h4><p>Y salsa Tártara.</p></div>
           <div class="item-price">10,50€</div>
         </div>
         <div class="menu-item">
-          <div class="item-info"><h4>TRUFA & SETAS</h4><p>Carne smash, provolone, setas y mayo trufada.</p></div>
-          <div class="item-price">11,90€</div>
-        </div>
-        <div class="menu-item">
-          <div class="item-info"><h4>GOAT BURGER</h4><p>Queso de cabra, cebolla caramelizada y rúcula.</p></div>
-          <div class="item-price">11,50€</div>
+          <div class="item-info"><h4><span>21</span> Chipirones andaluza</h4></div>
+          <div class="item-price">9,50€</div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <section class="reviews-section">
-    <h2 class="section-title" style="font-size: 2.5rem;">Reseñas de Clientes</h2>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"Las mejores burgers de Zaragoza. El local es espectacular."</p>
-        <span class="author">- Carlos Mateo</span>
+  <section class="contact-container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <h2 class="section-title" style="text-align: left; font-size: 2.5rem; margin-bottom: 20px;">DÓNDE ESTAMOS</h2>
+        <div class="info-tag">DIRECCIÓN</div>
+        <p class="info-detail">C. de San Juan de la Cruz, 2<br>50006 Zaragoza</p>
+        <div class="info-tag">TELÉFONO</div>
+        <p class="info-detail" style="color: var(--teal-light); font-weight: bold;">684 140 839</p>
+        <div class="info-tag">INSTAGRAM</div>
+        <p class="info-detail">@JorgePome</p>
       </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"Increíbles las bravas y la atención. ¡Repetiremos pronto!"</p>
-        <span class="author">- Lucía R.</span>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2983.336181!2d-0.89!3d41.64!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDM4JzI0LjAiTiAwwrA1MycyNC4wIlc!5e0!3m2!1ses!2ses!4v1713170000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-    </div>
-  </section>
-
-  <section class="bar-section">
-    <div class="bar-bg"></div>
-    <div class="bar-text">
-      <h2>EL LOCAL</h2>
-      <p style="color: var(--yellow); letter-spacing: 2px;">C. de San Juan de la Cruz, 2</p>
-    </div>
-  </section>
-
-  <section class="contact-container" id="contacto">
-    <div class="contact-info">
-      <div class="info-tag">UBICACIÓN</div>
-      <div class="info-detail">San Juan de la Cruz, 2<br>50006 Zaragoza</div>
-      
-      <div class="info-tag">TELÉFONO</div>
-      <div class="info-detail" style="color: var(--teal-light)">684 140 839</div>
-      
-      <div class="info-tag">HORARIO</div>
-      <div class="info-detail">Mar - Dom: 12:00-16:00 / 19:00-22:30</div>
-    </div>
-    
-    <div class="map-frame">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.41165449557!2d-0.895353923414969!3d41.64684997126839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914b6815d5859%3A0x484df2dff156439a!2sC.%20de%20San%20Juan%20de%20la%20Cruz%2C%202%2C%2050006%20Zaragoza!5e0!3m2!1ses!2ses!4v1713180000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
   <footer>
-    BURGER POME ZARAGOZA © 2026
+    BAR POME ZARAGOZA · TODOS LOS DERECHOS RESERVADOS © 2026
   </footer>
 
 </body>
