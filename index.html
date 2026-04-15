@@ -31,12 +31,12 @@
 
     /* HERO */
     .hero { height: 80vh; display: flex; align-items: center; justify-content: center; position: relative; text-align: center; overflow: hidden; }
-    .hero-img { position: absolute; inset: 0; background: url('fotos/burger.jpg') center/cover; opacity: 0.35; filter: saturate(0.5); transform: scale(1.1); }
+    .hero-img { position: absolute; inset: 0; background: url('burger.jpg') center/cover; opacity: 0.35; filter: saturate(0.5); transform: scale(1.1); }
     .hero-content { z-index: 2; padding: 0 20px; }
     .hero-h1 { font-family: var(--font-display); font-size: clamp(80px, 15vw, 160px); line-height: 0.9; margin-bottom: 20px; }
     .hero-h1 span { -webkit-text-stroke: 1px var(--yellow); color: transparent; }
 
-    /* SECCIÓN CARTA (AHORA PRIMERO) */
+    /* SECCIÓN CARTA */
     .menu-section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
     .section-title { font-family: var(--font-display); font-size: 4rem; color: var(--yellow); text-align: center; margin-bottom: 60px; letter-spacing: 4px; }
     .menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; }
@@ -48,16 +48,16 @@
     .item-info p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.4; }
     .item-price { font-family: var(--font-display); font-size: 1.5rem; color: var(--yellow); }
 
-    /* GALERÍA DE FOTOS (DEBAJO DE LA CARTA) */
+    /* GALERÍA DE FOTOS */
     .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; padding: 60px 20px; max-width: 1300px; margin: 0 auto; }
-    .g-item { height: 350px; overflow: hidden; position: relative; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); }
+    .g-item { height: 350px; overflow: hidden; position: relative; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #222; }
     .g-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
     .g-item:hover img { transform: scale(1.05); }
     .g-item span { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); font-family: var(--font-display); font-size: 20px; color: white; }
 
     /* SECCIÓN EL LOCAL */
     .bar-section { position: relative; height: 500px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-top: 2px solid var(--teal); }
-    .bar-bg { position: absolute; inset: 0; background: url('fotos/bar pomes.jpg') center/cover fixed; filter: brightness(0.4); }
+    .bar-bg { position: absolute; inset: 0; background: url('bar pomes.jpg') center/cover fixed; filter: brightness(0.4); }
     .bar-text { z-index: 2; text-align: center; }
     .bar-text h2 { font-family: var(--font-display); font-size: 4rem; color: #fff; letter-spacing: 5px; }
 
@@ -116,7 +116,7 @@
         <div class="menu-item"><div class="item-info"><h4><span>10</span> Pluma Ibérica</h4><p>Queso D.O Idiazabal, cebolla caramelizada y panceta crujiente.</p></div><div class="item-price">8,50€</div></div>
         <div class="menu-item"><div class="item-info"><h4><span>11</span> Lomo de cerdo</h4><p>Pimiento del piquillo, queso ahumado y salsa de mostaza y miel.</p></div><div class="item-price">5,90€</div></div>
         <div class="menu-item"><div class="item-info"><h4><span>12</span> Contramuslo de pollo</h4><p>Queso ahumado, cebolla caramelizada, panceta, salsa Pome.</p></div><div class="item-price">5,90€</div></div>
-        <div class="menu-item"><div class="item-info"><h4><span>13</span> Bacon, queso</h4><p>Cebolla caramelizada y crema camembert.</p></div><div class="item-price">5,50€</div></div>
+        <div class="menu-item"><div class="item-info"><h4><span>13</span> Bacon y Queso</h4><p>Cebolla caramelizada y crema camembert.</p></div><div class="item-price">5,50€</div></div>
       </div>
 
       <div class="menu-category">
@@ -134,19 +134,19 @@
   </section>
 
   <section class="gallery">
-    <div class="g-item"><img src="fotos/burger.jpg" alt="Smash"><span>Nuestras Smash Burgers</span></div>
-    <div class="g-item"><img src="fotos/bravas.jpg" alt="Bravas"><span>Bravas Caseras Pome</span></div>
-    <div class="g-item"><img src="fotos/quesadilla de carne.jpg" alt="Quesadilla"><span>Quesadillas de Vacuno</span></div>
-    <div class="g-item"><img src="fotos/bacalao en tempura.jpg" alt="Bacalao"><span>Bacalao en Tempura</span></div>
-    <div class="g-item"><img src="fotos/tostada de lomo.jpg" alt="Tostada"><span>Tostada de Lomo</span></div>
-    <div class="g-item"><img src="fotos/bravas 2.jpg" alt="Raciones"><span>Raciones Variadas</span></div>
+    <div class="g-item"><img src="burger.jpg" alt="Smash"><span>Smash Burgers</span></div>
+    <div class="g-item"><img src="bravas.jpg" alt="Bravas"><span>Bravas Caseras</span></div>
+    <div class="g-item"><img src="quesadilla de carne.jpg" alt="Quesadilla"><span>Quesadillas</span></div>
+    <div class="g-item"><img src="bacalao en tempura.jpg" alt="Bacalao"><span>Rebozados</span></div>
+    <div class="g-item"><img src="tostada de lomo.jpg" alt="Tostada"><span>Nuestras Tostas</span></div>
+    <div class="g-item"><img src="bravas 2.jpg" alt="Raciones"><span>Raciones</span></div>
   </section>
 
   <section class="bar-section">
     <div class="bar-bg"></div>
     <div class="bar-text">
-      <h2>VEN A VERNOS</h2>
-      <p style="color: var(--yellow); letter-spacing: 3px;">EL MEJOR AMBIENTE DE LA ZONA</p>
+      <h2>EL LOCAL</h2>
+      <p style="color: var(--yellow); letter-spacing: 3px;">ZARAGOZA</p>
     </div>
   </section>
 
@@ -160,7 +160,7 @@
       <div class="info-detail">Mar - Dom: 12:00-16:00 / 19:00-22:30</div>
     </div>
     <div class="map-frame">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.564551130386!2d-0.8953110234150337!3d41.6435338712683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914b6815d5859%3A0x4a4df2df5d16439a!2sC.%20de%20San%20Juan%20de%20la%20Cruz%2C%202%2C%2050006%20Zaragoza!5e0!3m2!1ses!2ses!4v1713175000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.8214220556637!2d-0.8953185234293881!3d41.63801267126938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5915b6815d5859%3A0x484df2dff716439a!2sC.%20de%20San%20Juan%20de%20la%20Cruz%2C%202%2C%2050006%20Zaragoza!5e0!3m2!1ses!2ses!4v1713175000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
