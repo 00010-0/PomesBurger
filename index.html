@@ -31,44 +31,48 @@
 
     /* HERO */
     .hero { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; text-align: center; }
-    .hero-img { position: absolute; inset: 0; background: url('burger.jpg') center/cover; opacity: 0.4; transform: scale(1.05); }
+    .hero-img { position: absolute; inset: 0; background: url('burger.jpg') center/cover; opacity: 0.4; }
     .hero-content { z-index: 2; }
     .hero-h1 { font-family: var(--font-display); font-size: clamp(80px, 15vw, 160px); line-height: 0.9; margin-bottom: 20px; }
     .hero-h1 span { -webkit-text-stroke: 1px var(--yellow); color: transparent; }
 
     /* CARTA COMPLETA */
     .menu-section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
-    .section-title { font-family: var(--font-display); font-size: 4rem; color: var(--yellow); text-align: center; margin-bottom: 50px; }
+    .section-title { font-family: var(--font-display); font-size: 4rem; color: var(--yellow); text-align: center; margin-bottom: 50px; letter-spacing: 3px; }
+    
     .menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-    .menu-category h3 { font-family: var(--font-display); font-size: 2.2rem; color: var(--teal-light); border-bottom: 2px solid var(--teal); margin-bottom: 25px; }
+    .menu-category h3 { font-family: var(--font-display); font-size: 2.2rem; color: var(--teal-light); border-bottom: 2px solid var(--teal); margin-bottom: 25px; padding-bottom: 5px; }
+    
     .menu-item { display: flex; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px dashed rgba(255,255,255,0.1); padding-bottom: 10px; }
-    .item-price { font-family: var(--font-display); font-size: 1.4rem; color: var(--yellow); }
+    .item-info { flex: 1; padding-right: 20px; }
+    .item-info h4 { font-family: var(--font-body); font-size: 1.1rem; text-transform: uppercase; color: white; margin-bottom: 5px; }
+    .item-info p { font-size: 0.85rem; color: var(--muted); font-weight: 300; color: rgba(255,255,255,0.6); }
+    .item-price { font-family: var(--font-display); font-size: 1.4rem; color: var(--yellow); white-space: nowrap; }
 
     /* SECCIÓN RESEÑAS */
-    .reviews-section { padding: 80px 20px; background: var(--dark2); text-align: center; }
+    .reviews-section { padding: 80px 20px; background: var(--dark2); text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
     .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1100px; margin: 40px auto; }
     .review-card { background: #1a2120; padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
     .stars { color: var(--yellow); font-size: 1.2rem; margin-bottom: 15px; }
-    .review-card p { font-style: italic; font-size: 0.95rem; margin-bottom: 15px; }
-    .author { font-weight: bold; color: var(--teal-light); text-transform: uppercase; font-size: 0.8rem; }
+    .author { font-weight: bold; color: var(--teal-light); text-transform: uppercase; font-size: 0.8rem; margin-top: 10px; display: block; }
 
-    /* SECCIÓN EL LOCAL */
-    .bar-section { position: relative; height: 500px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .bar-bg { position: absolute; inset: 0; background: url('bar pomes.jpg') center/cover fixed; filter: brightness(0.6); }
-    .bar-text { z-index: 2; text-align: center; }
-    .bar-text h2 { font-family: var(--font-display); font-size: 4rem; color: #fff; text-shadow: 0 0 20px rgba(0,0,0,0.5); }
+    /* SECCIÓN EL BAR AMPLIA */
+    .bar-section { position: relative; height: 600px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-top: 2px solid var(--teal); border-bottom: 2px solid var(--teal); }
+    .bar-bg { position: absolute; inset: 0; background: url('bar pomes.jpg') center/cover fixed; filter: brightness(0.5); }
+    .bar-text { z-index: 2; text-align: center; background: rgba(0,0,0,0.4); padding: 40px; backdrop-filter: blur(3px); border-radius: 10px; }
+    .bar-text h2 { font-family: var(--font-display); font-size: 4rem; color: #fff; letter-spacing: 5px; }
 
-    /* MAPA A COLOR Y CONTACTO */
+    /* CONTACTO Y MAPA COLOR */
     .contact-container { padding: 80px 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-    .map-frame { border: 4px solid var(--teal); border-radius: 20px; overflow: hidden; height: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    .contact-info { display: flex; flex-direction: column; justify-content: center; }
-    .info-tag { color: var(--yellow); font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 10px; }
-    .info-detail { font-size: 1.3rem; margin-bottom: 30px; font-weight: 600; }
+    .map-frame { border: 4px solid var(--teal); border-radius: 20px; overflow: hidden; height: 450px; }
+    .info-tag { color: var(--yellow); font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 5px; }
+    .info-detail { font-size: 1.2rem; margin-bottom: 25px; font-weight: 600; }
 
-    footer { text-align: center; padding: 40px; opacity: 0.4; font-size: 0.8rem; }
+    footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; letter-spacing: 2px; }
 
     @media (max-width: 768px) {
       .hero-h1 { font-size: 70px; }
+      .bar-text h2 { font-size: 2.5rem; }
     }
   </style>
 </head>
@@ -76,54 +80,80 @@
 
   <nav>
     <a href="#" class="logo">BURGER <span>POME</span></a>
-    <a href="tel:684140839" style="background: var(--yellow); color: black; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-decoration: none;">684 140 839</a>
+    <a href="tel:684140839" style="background: var(--yellow); color: black; padding: 10px 20px; border-radius: 4px; font-weight: bold; text-decoration: none;">PEDIDOS: 684 140 839</a>
   </nav>
 
   <section class="hero">
     <div class="hero-img"></div>
     <div class="hero-content">
       <h1 class="hero-h1">SMASH<br><span>POME</span></h1>
-      <p style="color: var(--teal-light); letter-spacing: 5px; font-weight: bold;">EL SABOR DE ZARAGOZA</p>
+      <p style="color: var(--teal-light); letter-spacing: 5px; font-weight: bold;">AUTÉNTICO GASTROBAR</p>
     </div>
   </section>
 
   <section class="menu-section" id="carta">
     <h2 class="section-title">Nuestra Carta</h2>
     <div class="menu-container">
+      
       <div class="menu-category">
-        <h3>PARA EMPEZAR</h3>
-        <div class="menu-item"><div><h4>PATATAS BRAVAS</h4><p>Caseras con salsa secreta.</p></div><div class="item-price">6,00€</div></div>
-        <div class="menu-item"><div><h4>QUESADILLA VACUNO</h4><p>Queso fundido y carne smash.</p></div><div class="item-price">7,50€</div></div>
-        <div class="menu-item"><div><h4>BACALAO EN TEMPURA</h4><p>Receta tradicional crujiente.</p></div><div class="item-price">8,50€</div></div>
-        <div class="menu-item"><div><h4>CROQUETAS CASERAS</h4><p>Consultar sabor.</p></div><div class="item-price">1,80€/u</div></div>
+        <h3>PARA PICAR</h3>
+        <div class="menu-item">
+          <div class="item-info"><h4>PATATAS BRAVAS</h4><p>Corte casero con nuestra salsa brava y alioli.</p></div>
+          <div class="item-price">6,00€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4>QUESADILLA DE VACUNO</h4><p>Carne picada, mix de quesos y vegetales.</p></div>
+          <div class="item-price">7,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4>BACALAO EN TEMPURA</h4><p>Tacos de bacalao con rebozado crujiente.</p></div>
+          <div class="item-price">8,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4>TOSTADA DE LOMO</h4><p>Lomo de calidad con pimientos asados.</p></div>
+          <div class="item-price">5,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4>CROQUETAS CASERAS</h4><p>Consultar disponibilidad y sabores.</p></div>
+          <div class="item-price">1,80€/u</div>
+        </div>
       </div>
+
       <div class="menu-category">
         <h3>SMASH BURGERS</h3>
-        <div class="menu-item"><div><h4>LA POME CLÁSICA</h4><p>Doble carne, cheddar y cebolla.</p></div><div class="item-price">9,50€</div></div>
-        <div class="menu-item"><div><h4>BACON CHEESE</h4><p>Extra de bacon crujiente.</p></div><div class="item-price">10,50€</div></div>
-        <div class="menu-item"><div><h4>TRUFA & SETAS</h4><p>Aroma intenso a trufa negra.</p></div><div class="item-price">11,90€</div></div>
-        <div class="menu-item"><div><h4>GOAT BURGER</h4><p>Rulo de cabra y caramelizada.</p></div><div class="item-price">11,50€</div></div>
+        <div class="menu-item">
+          <div class="item-info"><h4>LA POME CLÁSICA</h4><p>Doble carne, cheddar, cebolla picada y salsa Pome.</p></div>
+          <div class="item-price">9,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4>BACON CHEESE</h4><p>Doble carne, cheddar, bacon crujiente y BBQ.</p></div>
+          <div class="item-price">10,50€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4>TRUFA & SETAS</h4><p>Carne smash, provolone, setas y mayo trufada.</p></div>
+          <div class="item-price">11,90€</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info"><h4>GOAT BURGER</h4><p>Queso de cabra, cebolla caramelizada y rúcula.</p></div>
+          <div class="item-price">11,50€</div>
+        </div>
       </div>
+
     </div>
   </section>
 
   <section class="reviews-section">
-    <h2 class="section-title" style="font-size: 2.5rem;">Lo que dicen nuestros clientes</h2>
+    <h2 class="section-title" style="font-size: 2.5rem;">Reseñas de Clientes</h2>
     <div class="reviews-grid">
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"Las mejores smash burgers de Zaragoza sin duda. El local tiene un ambiente increíble y la atención es de 10."</p>
-        <div class="author">- Carlos G.</div>
+        <p>"Las mejores burgers de Zaragoza. El local es espectacular."</p>
+        <span class="author">- Carlos Mateo</span>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"Increíbles las quesadillas y la Pome Clásica. Muy buena relación calidad-precio. ¡Repetiremos seguro!"</p>
-        <div class="author">- María L.</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"Un sitio con mucha personalidad. Las patatas bravas son obligatorias si vienes."</p>
-        <div class="author">- Jorge R.</div>
+        <p>"Increíbles las bravas y la atención. ¡Repetiremos pronto!"</p>
+        <span class="author">- Lucía R.</span>
       </div>
     </div>
   </section>
@@ -131,15 +161,15 @@
   <section class="bar-section">
     <div class="bar-bg"></div>
     <div class="bar-text">
-      <h2>DISFRUTA EL MOMENTO</h2>
-      <p style="color: var(--yellow); letter-spacing: 2px;">EN EL CORAZÓN DE SAN JUAN DE LA CRUZ</p>
+      <h2>EL LOCAL</h2>
+      <p style="color: var(--yellow); letter-spacing: 2px;">C. de San Juan de la Cruz, 2</p>
     </div>
   </section>
 
   <section class="contact-container" id="contacto">
     <div class="contact-info">
       <div class="info-tag">UBICACIÓN</div>
-      <div class="info-detail">C. de San Juan de la Cruz, 2<br>50006 Zaragoza</div>
+      <div class="info-detail">San Juan de la Cruz, 2<br>50006 Zaragoza</div>
       
       <div class="info-tag">TELÉFONO</div>
       <div class="info-detail" style="color: var(--teal-light)">684 140 839</div>
@@ -149,7 +179,7 @@
     </div>
     
     <div class="map-frame">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.334057919839!2d-0.8957940234778338!3d41.64157547126861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5915b6815d5859%3A0x484df2dff716439a!2sC.%20de%20San%20Juan%20de%20la%20Cruz%2C%202%2C%2050006%20Zaragoza!5e0!3m2!1ses!2ses!4v1713172000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.41165449557!2d-0.895353923414969!3d41.64684997126839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914b6815d5859%3A0x484df2dff156439a!2sC.%20de%20San%20Juan%20de%20la%20Cruz%2C%202%2C%2050006%20Zaragoza!5e0!3m2!1ses!2ses!4v1713180000000!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
